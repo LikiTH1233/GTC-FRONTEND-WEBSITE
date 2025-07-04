@@ -6,7 +6,8 @@
   <title>GTG - Live your best life</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<script src="js/script.js"></script>
+<script src="script.js" defer></script>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -201,9 +202,10 @@
 
 <body>
   <header>
-    <div class="logo">GTG</div>
-    <nav>
-     <ul style="list-style: none; display: flex; gap: 2.5rem; font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0; padding: 0;">
+  <div class="logo">GTG</div>
+
+  <nav id="main-nav">
+    <ul style="list-style: none; display: flex; gap: 2.5rem; font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0; padding: 0;">
   <li><a href="#home" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Home</a></li>
   <li><a href="#shop" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Shop</a></li>
   <li><a href="#fragrances" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Fragrances</a></li>
@@ -211,13 +213,20 @@
   <li><a href="#blog" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Blog</a></li>
   <li><a href="#contact" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Contact</a></li>
 </ul>
+  </nav>
 
-    </nav>
-    <div>
-      <i class="fas fa-search" style="font-size: 1.2rem; margin-right: 1rem; color: #004d2d;"></i>
-      <a href="#shop" class="shop-now-btn">Shop Now</a>
-    </div>
-  </header>
+  <div class="header-icons">
+    <i class="fas fa-search search-icon"></i>
+    <a href="#shop" class="shop-now-btn">Shop Now</a>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </div>
+
+  <div class="search-box" id="search-box">
+    <input type="text" placeholder="Search perfumes..." />
+    <button><i class="fas fa-arrow-right"></i></button>
+  </div>
+</header>
+
 
   <!-- Hero Section -->
   <section id="home" class="hero">
@@ -391,91 +400,175 @@
   <div style="display: flex; flex-wrap: wrap; gap: 2rem; max-width: 1200px; margin: auto; align-items: flex-start;">
 
     <!-- Product Image Column -->
-    <div style="flex: 1; min-width: 300px;">
-      <div style="width: 100%; aspect-ratio: 3/4; overflow: hidden; border-radius: 1rem; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        <img src="assets/imp1.png" alt="Main Perfume Bottle" style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block;">
-      </div>
+<div style="flex: 1; min-width: 300px;">
+  <!-- Main Image -->
+  <div style="width: 100%; aspect-ratio: 3/4; overflow: hidden; border-radius: 1rem; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+    <img id="mainImage" src="assets/imp1.png" alt="Main Perfume Bottle"
+         style="width: 100%; height: 100%; object-fit: contain; object-position: center;">
+  </div>
 
-      <div style="display: flex; gap: 0.75rem; margin-top: 1rem; justify-content: center;">
-        <img src="assets/f123l.jpg" style="width: 60px; border-radius: 0.5rem; cursor: pointer; transition: transform 0.2s;">
-        <img src="assets/f1l.jpg" style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
-        <img src="assets/fi1.jpg" style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
-        <img src="assets/fi.jpg" style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
-      </div>
-    </div>
+  <!-- Thumbnails -->
+  <div style="display: flex; gap: 0.75rem; margin-top: 1rem; justify-content: center;">
+    <img class="thumb" src="assets/imp1.png" data-large="assets/imp1.png"
+         style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
+    <img class="thumb" src="assets/f123l.jpg" data-large="assets/f123l.jpg"
+         style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
+    <img class="thumb" src="assets/f1l.jpg" data-large="assets/f1l.jpg"
+         style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
+    <img class="thumb" src="assets/fi1.jpg" data-large="assets/fi1.jpg"
+         style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
+    <img class="thumb" src="assets/fi.jpg" data-large="assets/fi.jpg"
+         style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
+  </div>
+</div>
 
     <!-- Product Details Column -->
     <div style="flex: 1; min-width: 320px;">
       <h2 style="font-size: 2rem; color: #063d1e; margin-bottom: 0.5rem;">GTG Perfumes</h2>
       <p style="color: #888; margin-bottom: 1rem;">⭐ <strong>4.7</strong> (999+ reviews)</p>
       <p style="color: #333; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
-        Experience timeless elegance with a modern twist. Each bottle is a work of art, capturing notes that inspire confidence and sophistication.
+        Experience timeless elegance with a modern twist.
       </p>
 
       <div style="background: #fff; padding: 2rem; border-radius: 1rem; box-shadow: 0 0 30px rgba(0,0,0,0.05);">
 
-        <!-- Subscription Plan 1 -->
-        <div style="margin-bottom: 1.5rem;">
-          <input type="radio" name="plan" checked>
-          <label style="margin-left: 0.5rem;">
-            <strong>Single Subscription</strong><br>
-            <span style="font-size: 1.25rem;">$99.99 <s style="color: #999;">$146</s></span>
-          </label>
-        </div>
-
-        <!-- Fragrance Options -->
-        <div style="margin-bottom: 1.5rem;">
-          <p style="font-weight: 600;">Choose a Fragrance</p>
-          <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
-            <label><input type="radio" name="fragrance1"><img src="assets/imp1.png" style="width: 50px; border-radius: 0.5rem;"></label>
-            <label><input type="radio" name="fragrance1"><img src="assets/imp1.png" style="width: 50px; border-radius: 0.5rem;"></label>
-            <label><input type="radio" name="fragrance1"><img src="assets/imp1.png" style="width: 50px; border-radius: 0.5rem;"></label>
-          </div>
-        </div>
-
-        <!-- What’s Included -->
-        <div style="margin-bottom: 1.5rem;">
-          <p style="font-weight: 600;">What's Included:</p>
-          <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
-            <div style="text-align: center;"><img src="assets/imp1.png" style="width: 40px;"><p style="font-size: 0.85rem;">Every 30 Days</p></div>
-            <div style="text-align: center;"><img src="assets/imp1.png" style="width: 40px;"><p style="font-size: 0.85rem;"><strong>One Time (Free)</strong></p></div>
-          </div>
-        </div>
-
-        <!-- Benefits -->
-        <ul style="list-style: none; padding-left: 0; color: #063d1e; font-size: 0.95rem; margin-bottom: 1.5rem;">
-          <li style="margin-bottom: 0.5rem;">✔ 1 Bottle Shipped Monthly</li>
-          <li style="margin-bottom: 0.5rem;">✔ <strong>Free</strong> Sampler For All Scents</li>
-          <li style="margin-bottom: 0.5rem;">✔ <strong>50% OFF Shipping</strong></li>
-          <li style="margin-bottom: 0.5rem;">✔ Cancel After 3 Months</li>
-          <li style="margin-bottom: 0.5rem;">✔ 28-Day Money Back Guarantee*</li>
-        </ul>
-
-        <!-- Other Plans -->
+        <!-- Subscription Selection -->
         <div style="margin-bottom: 1rem;">
-          <input type="radio" name="plan">
-          <label style="margin-left: 0.5rem;">
-            <strong>Double Subscription</strong><br>
-            <span style="font-size: 1.25rem;">$169.99 <s style="color: #999;">$249</s></span>
-          </label>
+          <label><input type="radio" name="plan" value="single" checked> <strong>Single Subscription</strong></label><br>
+          <label><input type="radio" name="plan" value="double"> <strong>Double Subscription</strong></label><br>
+          <label><input type="radio" name="plan" value="once"> <strong>Try Once</strong></label>
         </div>
 
-        <div style="margin-bottom: 1rem;">
-          <input type="radio" name="plan">
-          <label style="margin-left: 0.5rem;">
-            <strong>Try Once</strong><br>
-            <span style="font-size: 1.25rem;">$129.99 <s style="color: #999;">$146</s></span>
-          </label>
-        </div>
+        <!-- Single Subscription Details -->
+<div id="single" class="plan-detail" style="display: block;">
+  <div style="margin-bottom: 1.5rem;">
+    <p style="font-weight: 600;">Choose a Fragrance</p>
+    <div style="display: flex; gap: 1rem;">
+      <label><input type="radio" name="fragrance" value="rose"><img src="assets/imp1.png" style="width: 50px;"></label>
+      <label><input type="radio" name="fragrance" value="musk"><img src="assets/imp1.png" style="width: 50px;"></label>
+      <label><input type="radio" name="fragrance" value="citrus"><img src="assets/imp1.png" style="width: 50px;"></label>
+    </div>
+  </div>
+  <div style="margin-bottom: 1.5rem;">
+    <p style="font-weight: 600;">What's Included:</p>
+    <div style="display: flex; gap: 1.5rem;">
+      <div><img src="assets/imp1.png" style="width: 40px;"><p>Every 30 Days</p></div>
+      <div><img src="assets/imp1.png" style="width: 40px;"><p><strong>One Time (Free)</strong></p></div>
+    </div>
+  </div>
+  <ul style="list-style: none; padding-left: 0;">
+    <li>✔ 1 Bottle Shipped Monthly</li>
+    <li>✔ Free Sampler</li>
+    <li>✔ 50% OFF Shipping</li>
+    <li>✔ Cancel After 3 Months</li>
+    <li>✔ 28-Day Money Back Guarantee</li>
+  </ul>
+</div>
+
+<!-- Double Subscription Details -->
+<div id="double" class="plan-detail" style="display: none;">
+  <div style="margin-bottom: 1.5rem;">
+    <p style="font-weight: 600;">Choose 2 Fragrances</p>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <label><input type="checkbox" name="fragrance-double" value="rose"><img src="assets/imp1.png" style="width: 50px;"></label>
+      <label><input type="checkbox" name="fragrance-double" value="musk"><img src="assets/imp1.png" style="width: 50px;"></label>
+      <label><input type="checkbox" name="fragrance-double" value="citrus"><img src="assets/imp1.png" style="width: 50px;"></label>
+      <label><input type="checkbox" name="fragrance-double" value="amber"><img src="assets/imp1.png" style="width: 50px;"></label>
+    </div>
+  </div>
+  <div style="margin-bottom: 1.5rem;">
+    <p style="font-weight: 600;">What's Included:</p>
+    <div style="display: flex; gap: 1.5rem;">
+      <div><img src="assets/imp1.png" style="width: 40px;"><p>2 Bottles Monthly</p></div>
+      <div><img src="assets/imp1.png" style="width: 40px;"><p><strong>Free Global Shipping</strong></p></div>
+    </div>
+  </div>
+  <ul style="list-style: none; padding-left: 0;">
+    <li>✔ Choose 2 Unique Fragrances</li>
+    <li>✔ VIP Sample Access</li>
+    <li>✔ Free Global Shipping</li>
+    <li>✔ Cancel or Pause Anytime</li>
+  </ul>
+</div>
+
+<!-- Try Once Details -->
+<div id="once" class="plan-detail" style="display: none;">
+  <div style="margin-bottom: 1.5rem;">
+    <p style="font-weight: 600;">Choose a Fragrance</p>
+    <div style="display: flex; gap: 1rem;">
+      <label><input type="radio" name="fragrance-once" value="rose"><img src="assets/imp1.png" style="width: 50px;"></label>
+      <label><input type="radio" name="fragrance-once" value="musk"><img src="assets/imp1.png" style="width: 50px;"></label>
+      <label><input type="radio" name="fragrance-once" value="citrus"><img src="assets/imp1.png" style="width: 50px;"></label>
+    </div>
+  </div>
+  <div style="margin-bottom: 1.5rem;">
+    <p style="font-weight: 600;">What's Included:</p>
+    <div style="display: flex; gap: 1.5rem;">
+      <div><img src="assets/imp1.png" style="width: 40px;"><p>One-Time Order</p></div>
+      <div><img src="assets/imp1.png" style="width: 40px;"><p><strong>No Subscription</strong></p></div>
+    </div>
+  </div>
+  <ul style="list-style: none; padding-left: 0;">
+    <li>✔ One Bottle, One-Time Order</li>
+    <li>✔ No Subscription</li>
+    <li>✔ Great for Gifting</li>
+  </ul>
+</div>
 
         <!-- Add to Cart Button -->
-        <button style="margin-top: 1.5rem; padding: 0.75rem 1.5rem; width: 100%; background: #004d2d; color: white; font-weight: bold; border: none; border-radius: 999px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;">
+        <button style="margin-top: 1.5rem; padding: 0.75rem 1.5rem; width: 100%; background: #004d2d; color: white; font-weight: bold; border: none; border-radius: 999px; font-size: 1rem;">
           Add to Cart
         </button>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  const radioButtons = document.querySelectorAll('input[name="plan"]');
+  const sections = document.querySelectorAll('.plan-detail');
+
+  radioButtons.forEach((radio) => {
+    radio.addEventListener("change", function () {
+      sections.forEach((section) => {
+        section.style.display = "none";
+      });
+
+      const selected = document.getElementById(this.value);
+      if (selected) selected.style.display = "block";
+    });
+  });
+
+  let mainImage = document.getElementById("mainImage");
+  let thumbnails = document.querySelectorAll(".thumb");
+
+  thumbnails.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      const newSrc = thumb.getAttribute("data-large");
+      mainImage.src = newSrc;
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const planRadios = document.querySelectorAll('input[name="plan"]');
+    const planDetails = {
+      single: document.getElementById("single"),
+      double: document.getElementById("double"),
+      once: document.getElementById("once")
+    };
+
+    planRadios.forEach(radio => {
+      radio.addEventListener("change", function () {
+        const selected = this.value;
+        Object.keys(planDetails).forEach(key => {
+          planDetails[key].style.display = (key === selected) ? "block" : "none";
+        });
+      });
+    });
+  });
+
+
+</script>
 
 
 
@@ -659,6 +752,30 @@
     
   </div>
 </section>
+<section id="percentages" style="padding: 4rem 2rem; background-color: #07b555; font-family: 'Poppins', sans-serif;">
+  <div style="max-width: 1000px; margin: auto; text-align: center;">
+    <h2 style="font-size: 2rem; color: #000000; margin-bottom: 2rem;">Why Customers Love GTG</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+      <div>
+        <div class="percentage" data-target="97" style="font-size: 2.5rem; font-weight: bold; color: #000000;">0%</div>
+        <p style="color: #000000;">Long-lasting fragrance</p>
+      </div>
+      <div>
+        <div class="percentage" data-target="99" style="font-size: 2.5rem; font-weight: bold; color: #000000;">0%</div>
+        <p style="color: #000000;">Natural Ingredients</p>
+      </div>
+      <div>
+        <div class="percentage" data-target="95" style="font-size: 2.5rem; font-weight: bold; color: #000000;">0%</div>
+        <p style="color: #000000;">Customer Satisfaction</p>
+      </div>
+      <div>
+        <div class="percentage" data-target="98" style="font-size: 2.5rem; font-weight: bold; color: #000000;">0%</div>
+        <p style="color: #000000;">Repeat Orders</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 </section>
 <section style="padding: 4rem 2rem; background: #f0fef3;">
@@ -764,29 +881,31 @@
       Hear from our delighted customers who have experienced the magic of GTG perfumes.
     </p>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-
-      <!-- Testimonial 1 -->
-      <div style="flex: 1 1 300px; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <p style="font-style: italic; color: #333;">“The fragrance lasts all day, and I’ve never received more compliments!”</p>
+    <!-- Scrollable container -->
+    <div style="overflow-x: auto; white-space: nowrap; padding-bottom: 1rem; -webkit-overflow-scrolling: touch;">
+      <!-- Testimonial Cards -->
+      <div style="display: inline-block; vertical-align: top; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); width: 300px; margin-right: 1rem;">
+        <p style="font-style: italic; color: #333;">"I love it"</p>
         <h4 style="margin-top: 1rem; font-weight: 600;">— Aanya R.</h4>
       </div>
 
-      <!-- Testimonial 2 -->
-      <div style="flex: 1 1 300px; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <p style="font-style: italic; color: #333;">“Elegant packaging, pure scent, and amazing customer service. I’m in love!”</p>
+      <div style="display: inline-block; vertical-align: top; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); width: 300px; margin-right: 1rem;">
+        <p style="font-style: italic; color: #333;">"Elegant packaging"</p>
         <h4 style="margin-top: 1rem; font-weight: 600;">— Ravi T.</h4>
       </div>
 
-      <!-- Testimonial 3 -->
-      <div style="flex: 1 1 300px; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <p style="font-style: italic; color: #333;">“Every note feels premium. This is my go-to fragrance brand now.”</p>
+      <div style="display: inline-block; vertical-align: top; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); width: 300px; margin-right: 1rem;">
+        <p style="font-style: italic; color: #333;">"Every note feels premium."</p>
         <h4 style="margin-top: 1rem; font-weight: 600;">— Sneha M.</h4>
       </div>
-
+      <div style="display: inline-block; vertical-align: top; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); width: 300px; margin-right: 1rem;">
+        <p style="font-style: italic; color: #333;">"It feels premium."</p>
+        <h4 style="margin-top: 1rem; font-weight: 600;">— Likith H M.</h4>
+      </div>
     </div>
   </div>
 </section>
+
 
 <section id="contact">
     <!-- FAQ -->
@@ -927,7 +1046,61 @@
   </div>
 </footer>
 
+<script>document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".percentage");
+  let animated = false;
 
+  const animate = () => {
+    if (animated) return;
+    animated = true;
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      let count = 0;
+      const updateCount = () => {
+        if (count < target) {
+          count++;
+          counter.textContent = `${count}%`;
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.textContent = `${target}%`;
+        }
+      };
+      updateCount();
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animate();
+    }
+  }, { threshold: 0.5 });
+
+  const percentageSection = document.getElementById("percentages");
+  if (percentageSection) {
+    observer.observe(percentageSection);
+  }
+});
+// Toggle search box
+document.querySelector(".search-icon").addEventListener("click", () => {
+  const searchBox = document.getElementById("search-box");
+  searchBox.style.display = searchBox.style.display === "block" ? "none" : "block";
+});
+
+// Toggle hamburger menu
+document.getElementById("hamburger").addEventListener("click", () => {
+  const nav = document.getElementById("main-nav");
+  nav.classList.toggle("show");
+});
+  // Close the menu when clicking outside
+  document.addEventListener("click", (event) => {
+    const nav = document.getElementById("main-nav");
+    if (!nav.contains(event.target) && !document.getElementById("hamburger").contains(event.target)) {
+      nav.classList.remove("show");
+    }
+  });
+
+</script>
 
 </body>
 </html>
