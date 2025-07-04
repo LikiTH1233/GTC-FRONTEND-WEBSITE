@@ -2,22 +2,18 @@
 
 Welcome to the **GTG Perfume** frontend website — a visually stunning, responsive, and elegant fragrance brand landing page built using **HTML**, **CSS**, and **JavaScript**. This project is crafted to deliver an immersive digital experience for premium perfume lovers.
 
----
 
-##  Live Preview
-
-> Coming Soon — Host using GitHub Pages or any static hosting provider.
-
----
 
 ##  Screenshots
 
 | Homepage | Shop Section |
 |----------|--------------|
 
+![Screenshot 2025-07-05 011109](https://github.com/user-attachments/assets/806955b9-9841-438a-999c-54fd3c97c80d)
+
 ![Screenshot 2025-07-05 011159](https://github.com/user-attachments/assets/ac3ccde0-62dd-4363-ae6e-1fcd2b8a026e)
 
-![Screenshot 2025-07-05 011109](https://github.com/user-attachments/assets/806955b9-9841-438a-999c-54fd3c97c80d)
+
 
 ---
 
