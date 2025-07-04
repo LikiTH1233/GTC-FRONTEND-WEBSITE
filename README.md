@@ -35,8 +35,8 @@ Welcome to the **GTG Perfume** frontend website — a visually stunning, respons
 
 - **HTML5**
 - **CSS3** (with Flexbox & Grid)
-- **Vanilla JavaScript**
-- Fonts: [Poppins](https://fonts.google.com/specimen/Poppins), [Segoe UI](https://learn.microsoft.com/en-us/typography/font-list/segoe-ui)
+-  JavaScript**
+
 
 ---
 
