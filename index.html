@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTG - Live your best life</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="js/script.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1c2b2d;
+      background: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #004d2d;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #004d2d;
+    }
+
+    .shop-now-btn {
+      background: #004d2d;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .shop-now-btn:hover {
+      background: #007a4c;
+    }
+
+    .hero {
+      background: url('assets/1.png') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 8rem 4rem 0;
+      position: relative;
+    }
+
+    .badge {
+      background-color: #c6e2d1;
+      padding: 0.5rem 1.25rem;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      color: #004d2d;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: #102f1d;
+    }
+
+    .stats {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .stats .number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #004d2d;
+    }
+
+    .stats .label {
+      color: #3b5f49;
+      font-size: 0.95rem;
+    }
+
+    .footer-icons {
+      background-color: #f0fff6;
+      display: flex;
+      justify-content: space-around;
+      padding: 1.5rem 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer-icons div {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #1c2b2d;
+    }
+
+    .footer-icons i {
+      font-size: 1.4rem;
+      color: #004d2d;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem;
+      background-color: #fff;
+    }
+
+    .section-2-text {
+      max-width: 40%;
+    }
+
+    .section-2-text h3 {
+      color: #3b5f49;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-2-text h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .section-2-text p {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .view-btn {
+      background-color: #004d2d;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 999px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .circle-img {
+      width: 50%;
+    }
+
+    .circle-img img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">GTG</div>
+    <nav>
+     <ul style="list-style: none; display: flex; gap: 2.5rem; font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin: 0; padding: 0;">
+  <li><a href="#home" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Home</a></li>
+  <li><a href="#shop" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Shop</a></li>
+  <li><a href="#fragrances" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Fragrances</a></li>
+  <li><a href="#about" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">About Us</a></li>
+  <li><a href="#blog" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Blog</a></li>
+  <li><a href="#contact" style="text-decoration: none; color: #1a1a1a; transition: all 0.3s ease;">Contact</a></li>
+</ul>
+
+    </nav>
+    <div>
+      <i class="fas fa-search" style="font-size: 1.2rem; margin-right: 1rem; color: #004d2d;"></i>
+      <a href="#shop" class="shop-now-btn">Shop Now</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="badge"><i class="fas fa-medal"></i> Awarded Best Perfume in the World</div>
+    <h1>Live your best life.</h1>
+    <div class="stats">
+      <div>
+        <div class="number">10x</div>
+        <div class="label">Power</div>
+      </div>
+      <div>
+        <div class="number">9</div>
+        <div class="label">Ingredients</div>
+      </div>
+      <div>
+        <div class="number">20K+</div>
+        <div class="label">Happy Customers</div>
+      </div>
+    </div>
+    <a href="#shop" class="shop-now-btn">Shop Now</a>
+  </section>
+
+  <!-- Footer Icons -->
+  <section class="footer-icons">
+    <div>
+      <i class="fas fa-heart"></i>
+      <p>30-Day Guarantee</p>
+    </div>
+    <div>
+      <i class="fas fa-globe"></i>
+      <p>Worldwide Shipping</p>
+    </div>
+    <div>
+      <i class="fas fa-truck-fast"></i>
+      <p>Fast Delivery</p>
+    </div>
+    <div>
+      <i class="fas fa-leaf"></i>
+      <p>Eco Certified</p>
+    </div>
+  </section>
+
+
+
+  <section class="section-2" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 4rem 2rem; max-width: 1200px; margin: auto;">
+  <div class="section-2-text" style="flex: 1 1 45%; padding: 1rem;">
+    <h3 style="color: #004d2d; font-size: 0.95rem; letter-spacing: 1px; font-weight: 600; margin-bottom: 0.75rem;">9 POWERFUL SCENTS</h3>
+    <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; color: #1c2b2d;">All of the Best Ingredients,<br>None of the Compromise</h2>
+    <p style="font-size: 1rem; line-height: 1.6; color: #3a4b4d; margin-bottom: 1.5rem;">
+      GTG delivers <strong style="color: #004d2d;">10x longer-lasting fragrance</strong> with our advanced concentration formula — engineered for all-day projection and exceptional sillage.
+    </p>
+    <a href="#fragrances" class="view-btn" style="display: inline-block; background: #004d2d; color: white; padding: 0.65rem 1.6rem; border-radius: 999px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: background 0.3s ease;">
+      View All Fragrances
+    </a>
+  </div>
+
+  <div class="circle-img" style="flex: 1 1 45%; display: flex; justify-content: center; align-items: center; padding: 1rem;">
+  <img src="assets/sr1.png"
+       alt="Fragrance bottle with ingredients"
+       style="width: 100%; max-width: 400px; height: auto; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1);"
+       loading="lazy" />
+</div>
+
+</section>
+
+
+
+
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1c2b2d;
+      background-color: #fff;
+    }
+    .page {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .center-text {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .center-text h2 {
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: #4b8c79;
+      margin-bottom: 0.5rem;
+    }
+    .center-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #063d1e;
+    }
+    .center-text p {
+      font-size: 1rem;
+      color: #444;
+      max-width: 600px;
+      margin: 1rem auto 2rem;
+    }
+    .cta-button {
+      background-color: #004d2d;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 2rem;
+    }
+    .fragrance-card {
+      width: 250px;
+      text-align: center;
+    }
+    .fragrance-card img {
+      width: 100%;
+      border-radius: 1rem;
+    }
+    .fragrance-card h3 {
+      margin: 0.75rem 0 0.5rem;
+      font-size: 1.1rem;
+      color: #063d1e;
+    }
+    .fragrance-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+
+  </style>
+  <section id="fragrances">
+  <div class="page">
+    <div class="center-text">
+      <h2>OUR SIGNATURE COLLECTION</h2>
+      <h1>Experience Scents Like Never Before</h1>
+      <p>Explore a range of finely crafted fragrances that are designed to elevate your everyday. Each bottle is a testament to purity, potency, and elegance.</p>
+      <button class="cta-button">Browse Shop</button>
+    </div>
+    <div class="grid">
+      <div class="fragrance-card">
+        <img src="assets/fi.jpg" alt="Rose Perfume">
+        <h3>Rose Radiance</h3>
+        <p>Infused with fresh rose petals for a romantic touch.</p>
+      </div>
+      <div class="fragrance-card">
+        <img src="assets/f123l.jpg" alt="Lavender Perfume">
+        <h3>Lavender Calm</h3>
+        <p>Soothing notes of lavender to relax your senses.</p>
+      </div>
+      <div class="fragrance-card">
+        <img src="assets/fi1.jpg" alt="Vanilla Perfume">
+        <h3>Vanilla Dream</h3>
+        <p>Sweet and creamy vanilla for a warm embrace.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+  <section id="shop" style="background-color: #f9f9f9; padding: 4rem 2rem; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; max-width: 1200px; margin: auto; align-items: flex-start;">
+
+    <!-- Product Image Column -->
+    <div style="flex: 1; min-width: 300px;">
+      <div style="width: 100%; aspect-ratio: 3/4; overflow: hidden; border-radius: 1rem; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        <img src="assets/imp1.png" alt="Main Perfume Bottle" style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block;">
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; margin-top: 1rem; justify-content: center;">
+        <img src="assets/f123l.jpg" style="width: 60px; border-radius: 0.5rem; cursor: pointer; transition: transform 0.2s;">
+        <img src="assets/f1l.jpg" style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
+        <img src="assets/fi1.jpg" style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
+        <img src="assets/fi.jpg" style="width: 60px; border-radius: 0.5rem; cursor: pointer;">
+      </div>
+    </div>
+
+    <!-- Product Details Column -->
+    <div style="flex: 1; min-width: 320px;">
+      <h2 style="font-size: 2rem; color: #063d1e; margin-bottom: 0.5rem;">GTG Perfumes</h2>
+      <p style="color: #888; margin-bottom: 1rem;">⭐ <strong>4.7</strong> (999+ reviews)</p>
+      <p style="color: #333; font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+        Experience timeless elegance with a modern twist. Each bottle is a work of art, capturing notes that inspire confidence and sophistication.
+      </p>
+
+      <div style="background: #fff; padding: 2rem; border-radius: 1rem; box-shadow: 0 0 30px rgba(0,0,0,0.05);">
+
+        <!-- Subscription Plan 1 -->
+        <div style="margin-bottom: 1.5rem;">
+          <input type="radio" name="plan" checked>
+          <label style="margin-left: 0.5rem;">
+            <strong>Single Subscription</strong><br>
+            <span style="font-size: 1.25rem;">$99.99 <s style="color: #999;">$146</s></span>
+          </label>
+        </div>
+
+        <!-- Fragrance Options -->
+        <div style="margin-bottom: 1.5rem;">
+          <p style="font-weight: 600;">Choose a Fragrance</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+            <label><input type="radio" name="fragrance1"><img src="assets/imp1.png" style="width: 50px; border-radius: 0.5rem;"></label>
+            <label><input type="radio" name="fragrance1"><img src="assets/imp1.png" style="width: 50px; border-radius: 0.5rem;"></label>
+            <label><input type="radio" name="fragrance1"><img src="assets/imp1.png" style="width: 50px; border-radius: 0.5rem;"></label>
+          </div>
+        </div>
+
+        <!-- What’s Included -->
+        <div style="margin-bottom: 1.5rem;">
+          <p style="font-weight: 600;">What's Included:</p>
+          <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
+            <div style="text-align: center;"><img src="assets/imp1.png" style="width: 40px;"><p style="font-size: 0.85rem;">Every 30 Days</p></div>
+            <div style="text-align: center;"><img src="assets/imp1.png" style="width: 40px;"><p style="font-size: 0.85rem;"><strong>One Time (Free)</strong></p></div>
+          </div>
+        </div>
+
+        <!-- Benefits -->
+        <ul style="list-style: none; padding-left: 0; color: #063d1e; font-size: 0.95rem; margin-bottom: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">✔ 1 Bottle Shipped Monthly</li>
+          <li style="margin-bottom: 0.5rem;">✔ <strong>Free</strong> Sampler For All Scents</li>
+          <li style="margin-bottom: 0.5rem;">✔ <strong>50% OFF Shipping</strong></li>
+          <li style="margin-bottom: 0.5rem;">✔ Cancel After 3 Months</li>
+          <li style="margin-bottom: 0.5rem;">✔ 28-Day Money Back Guarantee*</li>
+        </ul>
+
+        <!-- Other Plans -->
+        <div style="margin-bottom: 1rem;">
+          <input type="radio" name="plan">
+          <label style="margin-left: 0.5rem;">
+            <strong>Double Subscription</strong><br>
+            <span style="font-size: 1.25rem;">$169.99 <s style="color: #999;">$249</s></span>
+          </label>
+        </div>
+
+        <div style="margin-bottom: 1rem;">
+          <input type="radio" name="plan">
+          <label style="margin-left: 0.5rem;">
+            <strong>Try Once</strong><br>
+            <span style="font-size: 1.25rem;">$129.99 <s style="color: #999;">$146</s></span>
+          </label>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button style="margin-top: 1.5rem; padding: 0.75rem 1.5rem; width: 100%; background: #004d2d; color: white; font-weight: bold; border: none; border-radius: 999px; font-size: 1rem; cursor: pointer; transition: background 0.3s ease;">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section style="background: linear-gradient(90deg, #0f5c30, #004d2d); color: white; padding: 4rem 2rem; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: auto; gap: 2rem;">
+
+    <!-- Image -->
+    <div style="flex: 1; text-align: center;">
+      <img src="assets/1111113.png" alt="The Ultimate Fragrance" style="max-width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);">
+    </div>
+
+    <!-- Text Content -->
+    <div style="flex: 1; padding: 1rem;">
+      <h4 style="font-size: 3.9rem; color: #c8e7dd; letter-spacing: 2px; margin-bottom: 0.5rem;">GTG OFFICIAL EDITION</h4>
+      <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem;color: #000000;">The Ultimate Fragrance</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+        <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 1rem; backdrop-filter: blur(2px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);">
+          <i class="fas fa-magic" style="font-size: 1.75rem; margin-bottom: 0.75rem;"></i>
+          <h4 style="margin: 0; font-size: 1.1rem;">Elegant Notes</h4>
+          <p style="font-size: 0.9rem; color: #d0f0e3;">A perfect blend of refined ingredients for a timeless scent.</p>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 1rem; backdrop-filter: blur(2px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);">
+          <i class="fas fa-box-open" style="font-size: 1.75rem; margin-bottom: 0.75rem;"></i>
+          <h4 style="margin: 0; font-size: 1.1rem;">Luxury Packaging</h4>
+          <p style="font-size: 0.9rem; color: #d0f0e3;">Designed for elegance—crafted to impress at every glance.</p>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 1rem; backdrop-filter: blur(2px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);">
+          <i class="fas fa-tint" style="font-size: 1.75rem; margin-bottom: 0.75rem;"></i>
+          <h4 style="margin: 0; font-size: 1.1rem;">Long-Lasting</h4>
+          <p style="font-size: 0.9rem; color: #d0f0e3;">Stays with you from morning to night—confidently bold.</p>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 1rem; backdrop-filter: blur(2px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);">
+          <i class="fas fa-heart" style="font-size: 1.75rem; margin-bottom: 0.75rem;"></i>
+          <h4 style="margin: 0; font-size: 1.1rem;">Globally Loved</h4>
+          <p style="font-size: 0.9rem; color: #d0f0e3;">Praised and adored by loyal customers in 30+ countries.</p>
+        </div>
+      </div>
+
+      <button style="margin-top: 2rem; padding: 0.85rem 2rem; background: white; color: #004d2d; border: none; border-radius: 999px; font-weight: 600; font-size: 1rem; box-shadow: 0 5px 15px rgba(0,0,0,0.15); cursor: pointer;">
+        Try Velvet Whisper Today
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section style="background: #f8f8f8; padding: 4rem 2rem;">
+  <div style="max-width: 1200px; margin: auto;">
+    
+    <!-- Subscribe Block with Background Image -->
+    <div style="
+      background: url('assets/bgg.jpg') left/cover no-repeat;
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: left;
+      justify-content: space-between;
+      gap: 2rem;
+      position: relative;
+      overflow: hidden;
+    ">
+
+      <!-- Overlay for Better Text Contrast -->
+      <div style="position: left; inset: 0; background-color: rgba(0, 0, 0, 0.5); border-radius: 1.5rem;"></div>
+
+      <!-- Text Section -->
+      <div style="flex: 1; position: relative; z-index: 1;">
+        <h4 style="letter-spacing: 2px; font-size: 1.9rem; text-transform: uppercase; opacity: 0.9;">Subscription</h4>
+        <h2 style="font-size: 2rem; margin-top: 0.5rem;color: #000000;">Subscribe & Save <strong style="color: #000000;">20%</strong style="color: #000000;"> on Every Perfume</h2>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0;">
+          <button style="
+            padding: 0.4rem 1.2rem;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.15);
+            color: #7d6c4e;
+            font-weight: 500;
+            cursor: pointer;
+          ">Monthly</button>
+
+          <button style="
+            padding: 0.4rem 1.2rem;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.15);
+            color: #7d6c4e;
+            font-weight: 500;
+            cursor: pointer;
+          ">Quarterly</button>
+
+          <button style="
+            padding: 0.4rem 1.2rem;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.15);
+            color: #7d6c4e;
+            font-weight: 500;
+            cursor: pointer;
+          ">Yearly</button>
+        </div>
+
+        <button style="
+          padding: 0.6rem 1.5rem;
+          background: white;
+          color: #7a6450;
+          border: none;
+          border-radius: 999px;
+          font-weight: 600;
+          font-size: 1rem;
+          cursor: pointer;
+        ">Subscribe Now</button>
+      </div>
+
+      <!-- (Optional) Right Image: Commented out since you now use background -->
+      <!--
+      <div style="flex: 1; text-align: center; z-index: 1;">
+        <img src="assets/bgg.jpg" alt="Subscription Perfume" style="max-width: 220px; border-radius: 1rem;">
+      </div>
+      -->
+
+    </div>
+  </div>
+</section>
+
+<section id="about">
+
+   <!-- Our Collection -->
+<section style="margin-top: 5rem; font-family: 'Poppins', sans-serif;">
+  <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; justify-content: space-between; max-width: 1200px; margin: auto; padding: 2rem; background: #f8fff8; border-radius: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+
+    <!-- Left Text Content -->
+    <div style="flex: 1 1 500px;">
+  <h2 style="font-size: 2.2rem; color: #063d1e; font-family: 'Poppins', sans-serif; margin-bottom: 1rem;">
+    Discover Our Collection
+  </h2>
+  <p style="font-size: 1.05rem; color: #333; line-height: 1.6; font-family: 'Poppins', sans-serif; margin-bottom: 2rem;">
+    Explore the signature line of GTG fragrances crafted to awaken your senses, captivate presence, and define luxury—every single day.
+  </p>
+
+  <details style="margin-bottom: 1.2rem; border: 1px solid #ccc; padding: 1rem 1.2rem; border-radius: 0.75rem; background-color: #fdfdfd; box-shadow: 0 4px 8px rgba(0,0,0,0.04); font-family: 'Poppins', sans-serif;">
+    <summary style="font-weight: 600; font-size: 1.05rem; cursor: pointer;">
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Star" style="width: 20px; vertical-align: middle; margin-right: 0.5rem;"> Signature Scents
+    </summary>
+    <p style="margin-top: 0.8rem; color: #555; font-size: 0.95rem;">
+      Our iconic blend of heritage and innovation—each bottle echoes sophistication with a lingering presence.
+    </p>
+  </details>
+
+  <details style="margin-bottom: 1.2rem; border: 1px solid #ccc; padding: 1rem 1.2rem; border-radius: 0.75rem; background-color: #fdfdfd; box-shadow: 0 4px 8px rgba(0,0,0,0.04); font-family: 'Poppins', sans-serif;">
+    <summary style="font-weight: 600; font-size: 1.05rem; cursor: pointer;">
+      <img src="https://cdn-icons-png.flaticon.com/512/7662/7662102.png" alt="Leaf" style="width: 20px; vertical-align: middle; margin-right: 0.5rem;"> Nature Inspired
+    </summary>
+    <p style="margin-top: 0.8rem; color: #555; font-size: 0.95rem;">
+      A botanical symphony: hand-harvested florals, earthy woods, and vibrant citruses. 100% vegan and cruelty-free.
+    </p>
+  </details>
+
+  <details style="border: 1px solid #ccc; padding: 1rem 1.2rem; border-radius: 0.75rem; background-color: #fdfdfd; box-shadow: 0 4px 8px rgba(0,0,0,0.04); font-family: 'Poppins', sans-serif;">
+    <summary style="font-weight: 600; font-size: 1.05rem; cursor: pointer;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" alt="Gift" style="width: 20px; vertical-align: middle; margin-right: 0.5rem;"> Gift Editions
+    </summary>
+    <p style="margin-top: 0.8rem; color: #555; font-size: 0.95rem;">
+      Designed for moments that matter — luxurious gift packaging and specially curated notes to leave a lasting impression.
+    </p>
+  </details>
+</div>
+
+    <!-- Right Image -->
+    <div style="flex: 1 1 400px; text-align: center;">
+      <img src="assets/211.jpg" alt="Perfume Hold" loading="lazy" style="max-width: 100%; border-radius: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+    </div>
+    
+  </div>
+</section>
+
+</section>
+<section style="padding: 4rem 2rem; background: #f0fef3;">
+  <div style="max-width: 1200px; margin: auto;">
+
+    <!-- GTG Comparison Table -->
+   <section style="font-family: 'Poppins', sans-serif; max-width: 1200px; margin: 4rem auto; padding: 2rem;">
+
+  <h1 style="text-align: center; font-size: 2.2rem; color: #063d1e; margin-bottom: 2rem;">
+    Why GTG is the #1 Choice
+  </h1>
+
+  <table style="width: 100%; border-collapse: collapse; font-size: 1rem; box-shadow: 0 10px 40px rgba(0,0,0,0.1); overflow: hidden; border-radius: 12px;">
+    <thead>
+      <tr style="background: linear-gradient(to right, #004d2d, #007a4d); color: white;">
+        <th style="padding: 1.2rem; letter-spacing: 1px;">Qualities</th>
+        <th style="padding: 1.2rem;">GTG</th>
+        <th style="padding: 1.2rem;">Brand A</th>
+        <th style="padding: 1.2rem;">Brand B</th>
+        <th style="padding: 1.2rem;">Brand C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background-color: #f8fff9;">
+        <td style="padding: 1rem; text-align: center;">Potency</td>
+        <td style="padding: 1rem; text-align: center;">✔️</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+      </tr>
+      <tr style="background-color: #ffffff;">
+        <td style="padding: 1rem; text-align: center;">Longevity</td>
+        <td style="padding: 1rem; text-align: center;">✔️</td>
+        <td style="padding: 1rem; text-align: center;">✔️</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+      </tr>
+      <tr style="background-color: #f8fff9;">
+        <td style="padding: 1rem; text-align: center;">Sillage</td>
+        <td style="padding: 1rem; text-align: center;">✔️</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+      </tr>
+      <tr style="background-color: #ffffff;">
+        <td style="padding: 1rem; text-align: center;">Price vs Quality</td>
+        <td style="padding: 1rem; text-align: center;">✔️</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+        <td style="padding: 1rem; text-align: center;">❌</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="text-align: center; margin-top: 2rem;">
+    <a href="#shop" 
+     style="display: inline-block; padding: 0.9rem 2rem; background: linear-gradient(to right, #004d2d, #076746); 
+            color: white; border-radius: 999px; font-weight: 700; font-size: 1.1rem; 
+            font-family: 'Poppins', sans-serif; text-decoration: none; transition: background 0.3s ease;">
+    Try it Risk-Free
+  </a>
+  </div>
+
+</section>
+
+<section id="blog" style="padding: 4rem 2rem; background: #f0fef3; font-family: 'Poppins', sans-serif;">
+    <!-- Founder Section -->
+<div style="margin-top: 4rem; display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;">
+  <div style="flex: 1;">
+    <img src="assets/bgg2.jpg" alt="Fragrance Showcase" 
+         style="width: 100%; border-radius: 1rem; object-fit: cover; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);">
+  </div>
+</div>
+<br>
+      <div style="flex: 1;">
+  <h3 style="font-size: 2.4rem; color: #053d26; font-weight: 800; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">
+    From the Founders
+  </h3>
+
+  <p style="font-size: 1.4rem; color: #03100b; font-weight: 800; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">
+    At <strong>GTG</strong>, we started with a simple belief — a great fragrance should do more than smell good; 
+    it should awaken memories, inspire confidence, and tell your story. 
+    Each scent is crafted with intention, care, and love — using nature’s finest elements blended through time-tested artistry. 
+    From the heart of our labs to your everyday moments, thank you for making us a part of your journey.
+  </p>
+
+  <br>
+
+  <a href="#about" 
+     style="display: inline-block; padding: 0.9rem 2rem; background: linear-gradient(to right, #004d2d, #076746); 
+            color: white; border-radius: 999px; font-weight: 700; font-size: 1.1rem; 
+            font-family: 'Poppins', sans-serif; text-decoration: none; transition: background 0.3s ease;">
+    Learn More About Us
+  </a>
+</div>
+
+<br><br></br>
+    <!-- What Customers Are Saying -->
+<section style="background: #fdfdfd; padding: 4rem 2rem; font-family: 'Poppins', sans-serif;">
+  <div style="max-width: 1200px; margin: auto; text-align: center;">
+    <h2 style="font-size: 2rem; color: #00331e; margin-bottom: 1rem;">What Customers Are Saying</h2>
+    <p style="color: #666; max-width: 700px; margin: 0 auto 3rem;">
+      Hear from our delighted customers who have experienced the magic of GTG perfumes.
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+
+      <!-- Testimonial 1 -->
+      <div style="flex: 1 1 300px; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <p style="font-style: italic; color: #333;">“The fragrance lasts all day, and I’ve never received more compliments!”</p>
+        <h4 style="margin-top: 1rem; font-weight: 600;">— Aanya R.</h4>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div style="flex: 1 1 300px; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <p style="font-style: italic; color: #333;">“Elegant packaging, pure scent, and amazing customer service. I’m in love!”</p>
+        <h4 style="margin-top: 1rem; font-weight: 600;">— Ravi T.</h4>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div style="flex: 1 1 300px; background: #f6f6f6; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <p style="font-style: italic; color: #333;">“Every note feels premium. This is my go-to fragrance brand now.”</p>
+        <h4 style="margin-top: 1rem; font-weight: 600;">— Sneha M.</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+    <!-- FAQ -->
+    <div style="margin-top: 4rem;">
+  <h2 style="font-size: 2rem; color: #063d1e;">FAQs</h2>
+  <p style="color: #444; max-width: 600px;">
+    If you have any question that isn’t answered in our FAQs, we’d love to hear from you!
+  </p>
+  <button style="
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: linear-gradient(to right, #00694d, #00a676);
+    color: white;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+  ">
+    Get In Touch
+  </button>
+
+  <ul style="list-style: none; padding: 0; max-width: 800px; margin: auto; font-family: 'Poppins', sans-serif;">
+  <li style="margin-bottom: 1.2rem;">
+    <details style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 1.2rem; background: #fdfdfd; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);">
+      <summary style="cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #004d2d; letter-spacing: 0.3px;">
+        How long does the fragrance last?
+      </summary>
+      <p style="margin-top: 0.75rem; color: #444; font-size: 0.98rem; line-height: 1.6;">
+        Our perfumes are designed to last all day with just a few sprays, thanks to high-quality, long-lasting ingredients.
+      </p>
+    </details>
+  </li>
+
+  <li style="margin-bottom: 1.2rem;">
+    <details style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 1.2rem; background: #fdfdfd; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);">
+      <summary style="cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #004d2d; letter-spacing: 0.3px;">
+        Do you offer international shipping?
+      </summary>
+      <p style="margin-top: 0.75rem; color: #444; font-size: 0.98rem; line-height: 1.6;">
+        Yes! We ship worldwide. Delivery times may vary based on your location, but we ensure safe and timely delivery.
+      </p>
+    </details>
+  </li>
+
+  <li style="margin-bottom: 1.2rem;">
+    <details style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 1.2rem; background: #fdfdfd; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);">
+      <summary style="cursor: pointer; font-size: 1.1rem; font-weight: 600; color: #004d2d; letter-spacing: 0.3px;">
+        Can I try a sample before buying?
+      </summary>
+      <p style="margin-top: 0.75rem; color: #444; font-size: 0.98rem; line-height: 1.6;">
+        Absolutely. We offer sample kits so you can experience our fragrances before committing to a full-size bottle.
+      </p>
+    </details>
+  </li>
+</ul>
+
+ </div>
+
+
+    <!-- Newsletter -->
+    <div style="margin-top: 4rem; background: #e5f9e6; padding: 3rem 2rem; border-radius: 1rem; text-align: center; max-width: 700px; margin-inline: auto;">
+  <h2 style="font-size: 1.8rem; color: #063d1e; font-family: 'Poppins', sans-serif;">Stay Updated With GTG</h2>
+  <p style="font-size: 1rem; color: #444; max-width: 500px; margin: 1rem auto 2rem; font-family: 'Poppins', sans-serif;">
+    Be the first to hear about new releases, exclusive offers, and scent stories straight from our lab.
+  </p>
+
+  <form style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+    <input type="email" placeholder="Your email" required
+      style="padding: 0.75rem 1rem; font-size: 1rem; border-radius: 999px; border: 1px solid #ccc; min-width: 250px; font-family: 'Poppins', sans-serif;">
+    
+    <button type="submit"
+      style="padding: 0.75rem 1.5rem; border: none; background: linear-gradient(to right, #00694d, #00a676); color: white;
+      border-radius: 999px; font-weight: 600; cursor: pointer; font-size: 1rem; font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.5px; transition: all 0.3s ease;">
+      Subscribe
+    </button>
+  </form>
+ </div>
+  </div>
+</section>
+
+<!-- Footer -->
+
+<!-- Footer Section -->
+<footer style="background-color: #002b1e; color: #f2f2f2; font-family: 'Poppins', sans-serif; padding: 4rem 2rem;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3rem;">
+
+    <!-- Brand Column -->
+    <div style="flex: 1 1 250px;">
+      <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem; color: #ffffff;">GTG</h2>
+      <p style="color: #aad5c0;">Crafted with passion and purity, GTG redefines fragrances with elegance and power.</p>
+    </div>
+
+    <!-- Navigation Column -->
+    <div style="flex: 1 1 180px;">
+      <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: #bce2e2">Quick Links</h3>
+      <ul style="list-style: none; padding: 0; line-height: 2;">
+        <li><a href="#home" style="color: #aad5c0; text-decoration: none;">Home</a></li>
+        <li><a href="#shop" style="color: #aad5c0; text-decoration: none;">Shop</a></li>
+        <li><a href="#about" style="color: #aad5c0; text-decoration: none;">About Us</a></li>
+        <li><a href="#fragrances" style="color: #aad5c0; text-decoration: none;">Fragrances</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- Resources Column -->
+    <div style="flex: 1 1 180px;">
+      <h3 style="font-size: 1.2rem; margin-bottom: 1rem;color: #aad5c0">Support</h3>
+      <ul style="list-style: none; padding: 0; line-height: 2;">
+        <li><a href="#contact" style="color: #aad5c0; text-decoration: none;">FAQs</a></li>
+        <li><a href="#returns" style="color: #aad5c0; text-decoration: none;">Returns</a></li>
+        <li><a href="#shipping" style="color: #aad5c0; text-decoration: none;">Shipping</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter Column -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="font-size: 1.2rem; margin-bottom: 1rem;color: #aad5c0">Subscribe</h3>
+      <p style="color: #aad5c0;">Join our newsletter to get updates on special offers and new launches.</p>
+      <form style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <input type="email" placeholder="Your email" required style="padding: 0.75rem 1rem; border-radius: 30px; border: none; font-size: 1rem;">
+        <button type="submit" style="background: #00d48b; color: #00331e; border: none; padding: 0.75rem 1rem; font-weight: bold; border-radius: 30px; cursor: pointer;">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <hr style="margin: 3rem auto 1rem; border: 0.5px solid #004d2d; max-width: 90%;">
+
+  <!-- Bottom Note -->
+  <div style="text-align: center; font-size: 0.9rem; color: #aad5c0; margin-top: 1rem;">
+    © 2025 GTG Perfumes. All rights reserved. | Designed  by Likith HM
+  </div>
+</footer>
+
+
+
+</body>
+</html>
