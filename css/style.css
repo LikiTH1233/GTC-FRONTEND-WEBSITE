@@ -977,3 +977,31 @@ nav ul li a:hover {
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .section-2 {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 2rem 1.5rem !important;
+  }
+
+  .section-2-text,
+  .circle-img {
+    flex: 1 1 100% !important;
+    padding: 1rem !important;
+  }
+
+  .section-2-text h2 {
+    font-size: 1.6rem !important;
+  }
+
+  .view-btn {
+    font-size: 0.95rem !important;
+    padding: 0.6rem 1.4rem !important;
+  }
+
+  .circle-img img {
+    max-width: 100% !important;
+    margin-top: 1.5rem;
+  }
+}
+
